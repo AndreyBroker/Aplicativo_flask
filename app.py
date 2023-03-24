@@ -20,7 +20,6 @@ def auth():
     validation = db.user_validation(username, password)
 
     if validation:
-
         session["username"] = validation
         return redirect(url_for('home'))
     else:
